@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Document</title>
+</head>
+<body>
+    <div id = "myDiv">This is the original text</div>
+    <button onclick="changeText()">Change the Text</button>
+
+    <div>this is the <span class="highlight">Highlighted Text</span></div>
+    <button onclick="highlightText()">Highlight the Text</button>
+    <p>this is the first para</p>
+    <p>this is the second para</p>
+    <p>this is the third para</p>
+    <button onclick="changeContent()">Change the para</button>
+    <div class="box">first box</div>
+    <div class="box">second box</div>
+    <button onmouseover="changebox()"></button>
+    <script>
+        function changeText(){
+            const element=document.getElementById("myDiv");
+            element.textContent="This is the modified text";
+            element.style.color = "red";
+            element.style.backgroundColor = "yellow";
+        }
+
+            function highlightText(){
+            const highlightingText=document.getElementById("highlight");
+            highlightingText[0].style.color="red";
+            highlightingText[0].style.backgroundColor = "yellow";
+            highlightingText[1].style.color = "blue";
+            highlightingText[1].style.backgroundColor = "white";
+
+        }
+        function changeContent(){
+            const changePara =document.getElementByTagNAme("p");
+            changePara[0].textContent="This is the modified first para ";
+            changePara[0].style.color = "green";
+            changePara[0].style.backgroundColor = "yellow";
+            changePara[1].textContent="This is the modified second para";
+            changePara[1].style.color = "blue";
+            changePara[1].style.backgroundColor = "grey";
+            changePara[2].textContent="This is the modified third para";
+            changePara[2].style.color = "blue";
+            changePara[2].style.backgroundColor = "red";
+        }
+    </script>
+</body>
+</html>
